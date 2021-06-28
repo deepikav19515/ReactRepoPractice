@@ -1,0 +1,57 @@
+CREATE DATABASE springapi;
+CREATE TABLE registration(
+	id bigint(20) NOT NULL,
+	adate varchar(255),
+	chistory varchar(255),
+	confirmpassword varchar(255),
+	contact varchar(255),
+	did bigint(20),
+	dname varchar(255),
+	hhistory varchar(255),
+	location varchar(255),
+	name varchar(255),
+	password varchar(255),
+	username varchar(255),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE doctor_log(
+	id bigint(20) NOT NULL,
+	password varchar(255),
+	username varchar(255),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE prescription(
+	id bigint(20) NOT NULL,
+	medicine varchar(255),
+	observation varchar(255),
+	patient_id bigint(20),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE payment(
+	pay_id bigint(20) NOT NULL,
+	card_no varchar(255),
+	card_type varchar(255),
+	cvv varchar(255),
+	expiry_date varchar(255),
+	name varchar(255),
+	patient_id varchar(255),
+	PRIMARY KEY(pay_id)
+);
+
+insert into doctor_log values(1,"Ananya@143","Ananya.s");
+insert into doctor_log values(2,"Kashyap@123","Kashyap.k");
+insert into doctor_log values(3,"Girish@456","Girish.babu");
+insert into doctor_log values(4,"Hegde@789","Srikanth.hegde");
+insert into doctor_log values(5,"Nirmala@111","Nirmala.s");
+
+
+
+
+
+
+
+
+
